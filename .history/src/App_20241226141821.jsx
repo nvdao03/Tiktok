@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from './routes';
 import { DefaultLayout } from './components/Layout';
@@ -9,17 +8,8 @@ function App() {
       <div className="App">
         <Routes>
           {publicRoutes.map((route, index) => {
+            const Layout = route.layout || DefaultLayout; // Nếu ko setting layout cho router thì nó sẽ lấy layout mặc định là DefaultLayout
             const Pages = route.component;
-
-            // Kiểm tra và check điều kiện để render ra DefaultLayout
-            let Layout = DefaultLayout;
-
-            if (route.layout) {
-              Layout = route.layout;
-            } else if (route.layout === null) {
-              Layout = Fragment;
-            }
-
             return (
               <Route
                 key={index}

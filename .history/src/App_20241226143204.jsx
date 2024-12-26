@@ -9,17 +9,8 @@ function App() {
       <div className="App">
         <Routes>
           {publicRoutes.map((route, index) => {
+            const Layout = route.layout === null ? <></> : DefaultLayout; // Kiểm tra và check điều kiện để render ra DefaultLayout
             const Pages = route.component;
-
-            // Kiểm tra và check điều kiện để render ra DefaultLayout
-            let Layout = DefaultLayout;
-
-            if (route.layout) {
-              Layout = route.layout;
-            } else if (route.layout === null) {
-              Layout = Fragment;
-            }
-
             return (
               <Route
                 key={index}

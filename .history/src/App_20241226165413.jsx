@@ -14,10 +14,10 @@ function App() {
             // Kiểm tra và check điều kiện để render ra DefaultLayout
             let Layout = DefaultLayout;
 
-            if (route.layout) {
-              Layout = route.layout;
-            } else if (route.layout === null) {
+            if (route.layout === null) {
               Layout = Fragment;
+            } else {
+              Layout = route.layout;
             }
 
             return (
