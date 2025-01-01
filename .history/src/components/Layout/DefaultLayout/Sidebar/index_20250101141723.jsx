@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 function Sidebar() {
   return (
     <aside className={cx('wrapper')}>
-      <h2>Sidebar Page</h2>
+      <h1>Sidebar Page</h1>
     </aside>
   );
 }

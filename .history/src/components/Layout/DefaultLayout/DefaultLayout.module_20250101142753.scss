@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1.6rem;
+  padding-right: 2.4rem;
+
+  background-color: rgb(255, 255, 255);
+}
+
+.content {
+  display: flex;
+  margin: 0px auto;
+  position: relative;
+  min-width: 420px;
+  -webkit-box-pack: center;
+  justify-content: center;
+}

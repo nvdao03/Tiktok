@@ -11,7 +11,7 @@ function DefaultLayout({ children }) {
       <Header />
       <div className={cx('container')}>
         <Sidebar />
-        <main className={cx('content')}>{children}</main>
+        <main className="content">{children}</main>
       </div>
     </div>
   );
