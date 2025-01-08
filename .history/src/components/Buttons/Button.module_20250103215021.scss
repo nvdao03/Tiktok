@@ -1,0 +1,29 @@
+.wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 10rem;
+  min-height: 36px;
+
+  padding: 6px 8px;
+  margin-left: 16px;
+
+  border-radius: 0.4rem;
+  border: none;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: rgb(255, 255, 255);
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: rgb(254, 44, 85);
+}

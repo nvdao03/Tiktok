@@ -1,0 +1,42 @@
+.wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 8px;
+  margin-left: 16px;
+
+  border-radius: 0.4rem;
+  border: none;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+// Button types
+.primary {
+  min-width: 10rem;
+
+  color: var(--white);
+  background-color: rgb(254, 44, 85);
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+  }
+}
+
+.outline {
+  height: 3.6rem;
+  font-weight: 600;
+}
+
+// Button sizes
+.small {
+  min-width: 106px;
+}

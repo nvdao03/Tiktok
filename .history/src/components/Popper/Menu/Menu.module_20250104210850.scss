@@ -1,0 +1,25 @@
+// Menu wrapper
+.menu-list {
+  width: 29rem;
+
+  // Menu item
+  .menu-item {
+    white-space: nowrap;
+    margin-left: 0;
+    padding: 1rem 0.8rem 1rem 1.6rem;
+    border-radius: 0;
+
+    width: 100%;
+    justify-content: flex-start;
+
+    &:hover {
+      // background: rgba(22, 24, 35, 0.03);
+      background-color: grey;
+    }
+  }
+}
+
+// Menu popper
+.menu-popper {
+  padding-bottom: 8px;
+}
