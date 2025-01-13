@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
 
 import styles from './Header.module.scss';
+import routesConfig from '../../../../config/routes';
 import images from '../../../../assets/images';
 import Button from '../../../Buttons';
 import Menu from '../../../Popper/Menu';
@@ -127,9 +129,9 @@ function Header() {
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
         {/* Logo */}
-        <a href="/" className={cx('logo')}>
+        <Link to={routesConfig.home} className={cx('logo')}>
           <img src={images.logo} alt="TikTok" />
-        </a>
+        </Link>
 
         {/* Search */}
         <Search />

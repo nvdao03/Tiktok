@@ -41,11 +41,8 @@ function Search() {
   const handleSearchChange = (e) => {
     const inputValue = e.target.value;
 
-    // Nếu nhập vào chỉ có 1 kí tự - Thực hiện xoá khoảng trấng 2 bên - Kiểm tra nếu kí tự nhập vào là khoảng trấng thì không cho phép nhập nữa
-    if (inputValue.length === 1) {
-      if (inputValue.trim() === '') {
-        return;
-      }
+    if (inputValue.startsWith(' ')) {
+      return;
     }
 
     setSearchValue(inputValue);
@@ -59,6 +56,7 @@ function Search() {
 
   return (
     <HeadlessTippy
+      appendTo={() => document.body}
       visible={showResult && searchResult.length > 0}
       interactive={true}
       render={(attrs) => (
